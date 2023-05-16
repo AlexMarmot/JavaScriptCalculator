@@ -1,0 +1,32 @@
+<html>	
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<script src="./script.js">
+		</script>
+	</head>
+	<body>
+		<div>
+			<label>Количество дней: <br>
+			<input style="width: 500px;" type="range" id="tTermRange" min="30" max="3600" step="30" value="365" onchange="termRangeFunction()" ></label> <br>
+			<input type="number" id="tTerm" min="30" max="3600" step="1" value="365" onchange="termFunction()"><br>
+			<hr>
+			<label>Сумма вклада:<br>
+			<input style="width: 500px;" type="range" id="pDepositRange" min="10000" max="10000000" step="1000" value="100000" onchange="DepositRangeFunction()" ></label><br>
+			<input type="number" id="pDeposit" min="10000" max="10000000" step="1000" value="100000" onchange="DepositFunction()">руб.<br>
+			<p id="one"></p>
+			<hr>
+			<label> Процент годовой ставки по депозиту:<br>
+				<input style="width: 500px;" type="range" id="iRateRange" min="1" max="100" step="1" value="10" onchange="RateRangeFunction()" ></label> <br>
+			<input type="number" id="iRate" min="1" max="100" step="1" value="10" onchange="RateFunction()">%
+			</div>
+				<div>
+			<input type="radio" name="typeOfCount" checked>Простой процент<br>
+			<input type="radio" name="typeOfCount">Сложный процент (с капитализацией)<br>
+			<br>
+			<button type="button" onclick="calcOfPercent();">Рассчитать</button>
+			<hr>
+			<label id="result"></label><br>
+			<label id="allSum"></label>
+		</div>
+	</body>
+</html>
